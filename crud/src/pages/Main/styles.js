@@ -29,3 +29,5 @@ export const SubmitButton = styled(RectButton)`
   margin-left: 10px;
   padding: 2px 10px;
 `;
+
+export const List = styled.FlatList``;

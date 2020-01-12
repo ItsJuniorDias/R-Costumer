@@ -70,6 +70,13 @@ export default function User() {
             placeholder="Endereço"
             returnKeyType="next"
           />
+          <FormInput
+            icon="border-color"
+            autoCorrect={false}
+            autoCapitalize="none"
+            placeholder="Observações"
+            returnKeyType="send"
+          />
           <ContainerButtons>
             <SubmitButton>Salvar</SubmitButton>
             <ButtonDelete>Deletar</ButtonDelete>
