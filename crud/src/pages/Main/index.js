@@ -7,10 +7,6 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Container, Form, SubmitButton, Text } from './styles';
 
 export default class Main extends Component {
-  state = {
-    client: [],
-  };
-
   handleNavigate = () => {
     const { navigation } = this.props;
 
@@ -18,8 +14,6 @@ export default class Main extends Component {
   };
 
   render() {
-    const { client } = this.state;
-
     return (
       <Container>
         <Form>
