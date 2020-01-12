@@ -1,26 +1,30 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable no-undef */
-/* eslint-disable import/named */
-/* eslint-disable no-shadow */
-/* eslint-disable no-plusplus */
-/* eslint-disable react/no-unused-state */
 /* eslint-disable react/prop-types */
-/* eslint-disable react/state-in-constructor */
 import React, { Component } from 'react';
 import { SQlite, openDatabase } from 'react-native-sqlite-storage';
+import { FlatList, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import Background from '../../components/Background';
 
-import { Container, Form, SubmitButton, Text, List } from './styles';
+import {
+  Container,
+  Form,
+  SubmitButton,
+  Text,
+  List,
+  User,
+  Nome,
+  CPF,
+  ProfileButton,
+  ProfileButtonText,
+} from './styles';
 
 export default class Main extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      Nome: '',
-      dataNasc: '',
+      Clientes: [],
     };
   }
 
@@ -31,6 +35,7 @@ export default class Main extends Component {
   };
 
   render() {
+    const { Clientes } = this.state;
     return (
       <Background>
         <Container>
@@ -40,7 +45,36 @@ export default class Main extends Component {
               <Icon name="person-add" size={20} color="#fff" />
             </SubmitButton>
           </Form>
-          <Text> {`O nome do cliente é ${this.state.Nome}`}</Text>
+
+          <Container>
+            <User>
+              <Nome>Alexandre Junior</Nome>
+              <CPF> 449.556.578-85</CPF>
+              <ProfileButton onPress={this.handleNavigate}>
+                <ProfileButtonText> Editar Cadastro</ProfileButtonText>
+              </ProfileButton>
+            </User>
+          </Container>
+
+          <Container>
+            <User>
+              <Nome>Fabiana Vargas</Nome>
+              <CPF>252.649.100-22</CPF>
+              <ProfileButton onPress={this.handleNavigate}>
+                <ProfileButtonText> Editar Cadastro</ProfileButtonText>
+              </ProfileButton>
+            </User>
+          </Container>
+
+          <Container>
+            <User>
+              <Nome>Meliana de Jesus</Nome>
+              <CPF>930.181.210-07</CPF>
+              <ProfileButton onPress={this.handleNavigate}>
+                <ProfileButtonText> Editar Cadastro</ProfileButtonText>
+              </ProfileButton>
+            </User>
+          </Container>
         </Container>
       </Background>
     );
