@@ -7,12 +7,12 @@ export const Container = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
+  margin-top: -50px;
 `;
 
 export const Form = styled.View`
-  align-items: stretch;
-  margin-top: 50px;
+  align-items: center;
+  margin-top: 30px;
 `;
 
 export const FormInput = styled(Input)`
@@ -20,7 +20,8 @@ export const FormInput = styled(Input)`
 `;
 
 export const SubmitButton = styled(Button)`
-  margin-top: 5px;
+  margin-top: 10px;
+  margin-right: 20px;
 `;
 
 export const SignLink = styled.TouchableOpacity`
@@ -31,4 +32,15 @@ export const SignLinkText = styled.Text`
   color: #fff;
   font-weight: bold;
   font-size: 16px;
+`;
+
+export const ButtonDelete = styled(Button)`
+  margin-top: 10px;
+  background: #b22222;
+`;
+
+export const ContainerButtons = styled.View`
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;

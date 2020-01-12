@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
+import Background from '../../components/Background';
+
 import { Container, Form, SubmitButton, Text } from './styles';
 
 export default class Main extends Component {
@@ -15,14 +17,16 @@ export default class Main extends Component {
 
   render() {
     return (
-      <Container>
-        <Form>
-          <Text>Adicione um cliente</Text>
-          <SubmitButton onPress={this.handleNavigate}>
-            <Icon name="person-add" size={20} color="#fff" />
-          </SubmitButton>
-        </Form>
-      </Container>
+      <Background>
+        <Container>
+          <Form>
+            <Text>Adicione um cliente</Text>
+            <SubmitButton onPress={this.handleNavigate}>
+              <Icon name="person-add" size={20} color="#fff" />
+            </SubmitButton>
+          </Form>
+        </Container>
+      </Background>
     );
   }
 }

@@ -18,6 +18,7 @@ export const Text = styled.Text`
   justify-content: center;
   align-items: center;
   font-size: 20px;
+  color: #fff;
 `;
 
 export const SubmitButton = styled(RectButton)`
