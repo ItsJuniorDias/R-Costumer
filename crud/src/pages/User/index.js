@@ -8,8 +8,6 @@ import {
   Form,
   FormInput,
   SubmitButton,
-  SignLink,
-  SignLinkText,
   ButtonDelete,
   ContainerButtons,
 } from './styles';

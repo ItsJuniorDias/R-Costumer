@@ -11,6 +11,7 @@ export const Form = styled.View`
   padding-bottom: 20px;
   border-bottom-width: 1px;
   border-color: #ddd;
+  margin-top: 10px;
 `;
 
 export const Text = styled.Text`
@@ -28,12 +29,6 @@ export const SubmitButton = styled(RectButton)`
   border-radius: 4px;
   margin-left: 10px;
   padding: 2px 10px;
-`;
-
-export const List = styled.FlatList.attrs({
-  showsVerticalScrollIndicator: false,
-})`
-  margin-top: 20px;
 `;
 
 export const User = styled.View`

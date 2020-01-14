@@ -24,16 +24,6 @@ export const SubmitButton = styled(Button)`
   margin-right: 20px;
 `;
 
-export const SignLink = styled.TouchableOpacity`
-  margin-top: 20px;
-`;
-
-export const SignLinkText = styled.Text`
-  color: #fff;
-  font-weight: bold;
-  font-size: 16px;
-`;
-
 export const ButtonDelete = styled(Button)`
   margin-top: 10px;
   background: #b22222;

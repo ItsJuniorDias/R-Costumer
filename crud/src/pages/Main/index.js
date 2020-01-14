@@ -1,7 +1,6 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
-import { SQlite, openDatabase } from 'react-native-sqlite-storage';
-import { FlatList, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import Background from '../../components/Background';
@@ -11,7 +10,6 @@ import {
   Form,
   SubmitButton,
   Text,
-  List,
   User,
   Nome,
   CPF,
@@ -34,6 +32,12 @@ export default class Main extends Component {
     navigation.navigate('User');
   };
 
+  handleNavigateMap = () => {
+    const { navigation } = this.props;
+
+    navigation.navigate('Map');
+  };
+
   render() {
     const { Clientes } = this.state;
     return (
@@ -43,6 +47,13 @@ export default class Main extends Component {
             <Text>Adicione um cliente</Text>
             <SubmitButton onPress={this.handleNavigate}>
               <Icon name="person-add" size={20} color="#fff" />
+            </SubmitButton>
+          </Form>
+
+          <Form>
+            <Text>Ver sua localização</Text>
+            <SubmitButton onPress={this.handleNavigateMap}>
+              <Icon name="location-on" size={20} color="#fff" />
             </SubmitButton>
           </Form>
 
