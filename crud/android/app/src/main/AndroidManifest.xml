@@ -21,7 +21,7 @@
         </intent-filter>
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
       <meta-data
         android:name="com.google.android.geo.API_KEY"
         android:value="AIzaSyD0T_S8Qo1cDtT_iUjERI4xalG_y9QxuGk"/>
