@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { View, FlatList, TouchableOpacity } from 'react-native';
+import { View, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import api from '../../services/api';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -35,27 +35,28 @@ export default class Main extends Component {
  }
 
  renderItem = ({item}) => (
-   <View> 
-     <Text>Nome - {item.nome} </Text>
-     <Text>CPF - {item.cpf}</Text>
-      <TouchableOpacity onPress={() => {}}> 
-       <Text>Editar cadastro</Text>
+   <Container style={styles.userContainer}> 
+     <Text style={styles.userNome}>Nome - {item.nome} </Text>
+     <Text style={styles.userCpf}>CPF - {item.cpf}</Text>
+      <TouchableOpacity style={styles.userButton} onPress={this.handleNavigate}> 
+       <Text style={styles.userText}>Editar cadastro</Text>
       </TouchableOpacity>
-   </View>
+   </Container>
  )
 
  render() {
   return (
     <Container> 
-      <Form>
+      <Form style={styles.userContainer}>
       <Text>Adicione um usuário</Text>
       <SubmitButton onPress={this.handleNavigate}> 
         <Icon name="person-add" size={25} color="#fff"/>
       </SubmitButton>
       </Form>
 
-      <View> 
+      <View style={styles.container}> 
         <FlatList
+          contentContainerStyle={styles.list}
           data={this.state.docs}
           keyExtractor = {item => item._id}
           renderItem={this.renderItem}
@@ -65,6 +66,55 @@ export default class Main extends Component {
   );
  }
 }
+
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#fafafa",
+  },
+  
+  userContainer:{
+    backgroundColor: "#fff",
+    borderWidth: 1,
+    borderColor: "#ddd",
+    borderRadius: 5,
+    padding: 20,
+    marginBottom: 20
+  },
+
+  userNome: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#333"
+  },
+
+  userCpf: {
+    fontSize: 16,
+    color: "#999",
+    marginTop: 5,
+    lineHeight: 24,
+  },
+
+  userButton: {
+    height: 50,
+    borderRadius: 5,
+    borderWidth: 2,
+    borderColor: '#3d3dff',
+    backgroundColor: 'transparent',
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 10,
+  },
+   
+  userText: {
+    fontSize: 20,
+    color: "#3d3dff",
+    fontWeight: "bold",
+    marginTop: 5,
+  }
+
+})
+
 
 Main.navigationOptions = {
   title: 'Usuários',
