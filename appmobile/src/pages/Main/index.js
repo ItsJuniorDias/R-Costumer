@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {Component} from 'react';
 import { View } from 'react-native';
 import api from '../../services/api';
 
@@ -6,22 +6,28 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import { Container, Form, Text, SubmitButton } from './styles';
 
-function Main() {
+export default class Main extends Component {
+
+
  handleNavigate = () => {
    const {navigation } = this.props;
 
    navigation.navigate('User');
  };
 
- useEffect(() => {
-   async function loadUsers() {
-     const response = await api.get('/users');
+ componentDidMount() {
+   this.loadUsers();
+ }
 
-     loadUsers(response.data);
-   }
-   loadUsers();
- }, [])
+ loadUsers = async () => {
+   const response = await api.get('/users');
 
+   const { docs } = response.data;
+   
+   console.log(docs);
+ }
+
+ render() {
   return (
     <Container> 
       <Form>
@@ -32,9 +38,8 @@ function Main() {
       </Form>
     </Container>
   );
+ }
 }
-
-export default Main;
 
 Main.navigationOptions = {
   title: 'Usuários',
