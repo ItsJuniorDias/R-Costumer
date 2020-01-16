@@ -8,3 +8,9 @@ export default function User() {
     <View />
   );
 }
+
+
+User.navigationOptions = {
+  title: 'Cadastar Usuários',
+
+}
