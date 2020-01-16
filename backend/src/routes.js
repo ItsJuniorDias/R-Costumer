@@ -1,21 +1,16 @@
 const {Router} = require('express');
-const User = require('./models/Users');
+const UserController = require('./controllers/UserController');
 
 const routes = Router();
 
-routes.post('/users', async (request, response) => {
-  const {nome, dataNascimento, cpf, celular, endereco, observacoes} = request.body;
-  
- const user = await User.create({
-    nome, 
-    dataNascimento,
-    cpf,
-    celular,
-    endereco,
-    observacoes
-  });
-  return response.json(user);
-});
+routes.get('/users', UserController.index);
+routes.get('/users/:id', UserController.show);
+
+routes.post('/users', UserController.store);
+routes.delete('/users/:id', UserController.destroy);
+routes.put('/users/:id', UserController.update);
+
+
 
 module.exports = routes;
 
