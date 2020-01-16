@@ -29,7 +29,7 @@ routes.get('/users/:id', UserController.show);
 
 routes.post('/users', checkUserExists,UserController.store);
 routes.delete('/users/:id', UserController.destroy);
-routes.put('/users/:id',checkUserExists, UserController.update);
+routes.put('/users/:id', UserController.update);
 
 
 
