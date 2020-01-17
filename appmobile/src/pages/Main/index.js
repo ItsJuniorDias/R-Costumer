@@ -11,9 +11,12 @@ export default class Main extends Component {
     super(props)
     
     this.state = {
+      userInfo: {},
       docs: [],
+      page: 1
     }
   }
+
 
 
  handleNavigate = () => {
@@ -26,12 +29,26 @@ export default class Main extends Component {
    this.loadUsers();
  }
 
- loadUsers = async () => {
-   const response = await api.get('/users');
+ loadUsers = async (page = 1) => {
+   const response = await api.get(`/users?page=${page}`);
 
-   const { docs } = response.data;
+   const { docs, ... userInfo } = response.data;
    
-   this.setState({docs});
+   this.setState({
+     docs:[ ...this.state.docs, ...docs], 
+     userInfo,
+     page
+    });
+ }
+
+ loadMore = () => {
+   const { page, userInfo } = this.state;
+
+   if(page === userInfo.pages) return;
+
+   const pageNumber = page + 1;
+
+   this.loadUsers(pageNumber);
  }
 
  renderItem = ({item}) => (
@@ -56,10 +73,10 @@ export default class Main extends Component {
 
       <View style={styles.container}> 
         <FlatList
-          contentContainerStyle={styles.list}
           data={this.state.docs}
           keyExtractor = {item => item._id}
           renderItem={this.renderItem}
+          onEndReached={this.loadMore}
         /> 
       </View>
     </Container>

@@ -2,11 +2,13 @@ import styled from 'styled-components/native';
 import { RectButton} from 'react-native-gesture-handler';
 
 export const Container = styled.View`
-  padding: 30px;
+  padding: 0 15px;
+  margin-top: 20px;
 `;
 
+
 export const Form = styled.View`
- flex-direction: row;
+ flex-direction: column;
  padding-bottom: 20px;
  border-bottom-width: 1px;
  border-color: #ddd;
@@ -27,3 +29,10 @@ export const SubmitButton = styled(RectButton)`
  margin-left: 120px;
  padding: 0 8px;
 `;
+
+export const Input = styled.TextInput`
+ font-size: 15px;
+ margin-left: 50px;
+ color: #333;
+`;
+
