@@ -8,14 +8,14 @@
 If you want to test the App in the Production mode, the installers are listed below
 - ReactNative [Link](https://facebook.github.io/react-native/docs/getting-started) for mobile
 
-# Backend
+## Backend
 ## Configuration
 - Configuration **Express** , a microframework that deals with routes, requests and responses;
 - Configuration **nodemon** to monitor code changes and restart the server automatically when changes occur;
 - Creation of *Models* and *Controllers*;
 - Configuration of **mongoose** (ODM that uses Javascript syntax) to handle **MongoDB**, a nonrelational database;
 
-# Mobile
+## Mobile
 ## Configuration  
 - Use of **react-native-vector-icons**, for styling the pages with the icons;
 - Using **react-navigation** to deal with navigation in a basic way;
