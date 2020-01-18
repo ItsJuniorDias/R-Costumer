@@ -31,6 +31,14 @@ If you want to test the App in the Production mode, the installers are listed be
 
 **Running**
 
+**Cloning the Repository**
+
+```
+$ git clone https://github.com/ItsJuniorDias/NewM
+
+$ cd NewM
+```
+
 **Backend**
 
 ```
