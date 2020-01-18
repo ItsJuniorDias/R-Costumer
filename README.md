@@ -47,6 +47,7 @@ $ npm install
 $ yarn dev
 ```
 
+**Mobile**
 
 Android
 
