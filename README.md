@@ -16,6 +16,10 @@ If you want to test the App in the Production mode, the installers are listed be
 
 ## Getting Started
 
+### Extra Settings :
+
+- Change the IP number in the ./services/api.js file, for your machine, this will allow requests to Api; 
+
 **Running**
 
 **Backend**
