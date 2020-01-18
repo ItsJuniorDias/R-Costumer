@@ -1,7 +1,7 @@
 # NewM
 ### Application build CRUD
 ![Capturar](https://user-images.githubusercontent.com/50254416/72656052-86949f80-3977-11ea-8084-dbc87a59237d.PNG)
-![Capturar1](https://user-images.githubusercontent.com/50254416/72656055-898f9000-3977-11ea-9375-fef6f201a7fc.PNG)
+![Capturar](https://user-images.githubusercontent.com/50254416/72664862-8630ee80-39e1-11ea-8199-722f06e2886f.PNG)
 
 
 ## Installers
