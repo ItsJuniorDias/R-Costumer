@@ -16,7 +16,6 @@ If you want to test the App in the Production mode, the installers are listed be
 
 ## Getting Started
 
-```
 **Running**
 
 **Backend**
@@ -25,6 +24,7 @@ If you want to test the App in the Production mode, the installers are listed be
 $ cd backend
 $ yarn dev
 ```
+
 
 Android
 
