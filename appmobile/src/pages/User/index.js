@@ -37,17 +37,15 @@ export default class User extends Component {
 
   handleAddUser = async () => {
 
-    params = {
-      nome:"Rauan",
-      dataNascimento: 12,
-      cpf: 12,
-      celular: 13,
-      email: "rauan@live.com",
-      endereco: "Rua Gs",
-      observacoes: "Já fez"
-    }
-
-     const response = await api.post('/users', params);
+     const response = await api.post('/users', {
+       nome: "Ana",
+       dataNascimento: 1221,
+       cpf: 13331,
+       celular: 12112,
+       email: "a@",
+       endereco: "Rua",
+       observacoes: "",
+     }) 
      
      console.log(response.data);
   }
