@@ -7,6 +7,7 @@
 ## Installers
 If you want to test the App in the Production mode, the installers are listed below
 - ReactNative [Link](https://facebook.github.io/react-native/docs/getting-started) for mobile
+- NodeJs [Link](https://nodejs.org/en/download/) for backend.
 
 ## Backend
 ## Configuration
