@@ -28,8 +28,8 @@ If you want to test the App in the Production mode, the installers are listed be
 **Backend**
 
 ```
-$ npm install
 $ cd backend
+$ npm install
 $ yarn dev
 ```
 
