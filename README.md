@@ -10,14 +10,14 @@ If you want to test the App in the Production mode, the installers are listed be
 - NodeJs [Link](https://nodejs.org/en/download/) for backend.
 
 ## Backend
-## Configuration
+### Configuration
 - Configuration **Express** , a microframework that deals with routes, requests and responses;
 - Configuration **nodemon** to monitor code changes and restart the server automatically when changes occur;
 - Creation of *Models* and *Controllers*;
 - Configuration of **mongoose** (ODM that uses Javascript syntax) to handle **MongoDB**, a nonrelational database;
 
 ## Mobile
-## Configuration  
+### Configuration  
 - Use of **react-native-vector-icons**, for styling the pages with the icons;
 - Using **react-navigation** to deal with navigation in a basic way;
 - Use of **react-native-gesture-handler**, dependent on *react-navigation*, responsible for handling user gestures;
