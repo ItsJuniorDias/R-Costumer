@@ -125,7 +125,7 @@ export default class User extends Component {
         <Input 
           keyboardType="default"
           autoCorrect={false}
-          placeholder= "Endereco"
+          placeholder= "Endereço"
           returnKeyType="next"
           required
           value={endereco}
@@ -159,6 +159,6 @@ export default class User extends Component {
 
 
 User.navigationOptions = {
-  title: 'Cadastar Usuários',
+  title: 'Cadastrar Usuário',
 
 }
