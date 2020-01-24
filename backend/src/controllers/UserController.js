@@ -1,5 +1,7 @@
 const User = require('../models/Users');
 
+const {deleteUser, updateUserData, findUserToDelete } = require('../services/userService');
+
   //index, show, store, update, destroy
 module.exports = {
 
@@ -11,10 +13,18 @@ module.exports = {
     return response.json(users);
   },
 
-  async destroy(request,response) {
-    await User.findByIdAndDelete(response.params.id);
+  async destroy(req, res) {
+    const {id } = req.params;
+    const userExists = await findUserToDelete(id);
+    const result = userExists ? {message: `O usuário ${userExists.nome} foi removido com sucesso`} : { 
+      message: 'Usuário não encontrado!'
+    }
 
-    return response.send();
+    if(userExists) {
+      await deleteUser(id);
+    }
+
+    return res.json(result);
   },
 
   async show(request, response) {
@@ -22,10 +32,13 @@ module.exports = {
     return response.json(user);
   },
 
-  async update(request,response) {
-    const user = await User.findByIdAndUpdate(request.params.id, request.body, {new: true});
+  async update(req,res) {
+   const { id } = req.params;
+   const {nome, dataNascimento, cpf, celular, email, endereco, observacoes} = req.body;
+   
+   const user = await updateUserData(id, nome, dataNascimento, cpf, celular, email, endereco, observacoes);
 
-    return response.json(user);
+    return res.json(user);
   },
 
   async store (request, response) {
